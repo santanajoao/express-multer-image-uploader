@@ -80,8 +80,15 @@ Retorna os dados de uma imagem específica.
 
 ### Frontend
 
-- HTML, CSS, JavaScript, TypeScript
+- HTML, CSS, JavaScript, TypeScript, http-server
 
 ### Backend
 
 - Node.js, Express.js, Multer, TypeScript
+
+## Como rodar
+
+1. Clone o repositório
+2. Execute o comando `docker compose up -d` no seu terminal
+3. Acesse o frontend em http://localhost:8080
+4. Acesse o backend em http://localhost:3001
