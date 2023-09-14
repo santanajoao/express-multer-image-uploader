@@ -1,6 +1,6 @@
 import { renderErrorMessage, unrenderErrorMessage } from "./errorMessage";
-import { getImageById } from "./services/image";
-import { ImageFile } from "./types/ImageFile";
+import { getImageById } from "../services/image";
+import { ImageFile } from "../types/ImageFile";
 
 // elements
 

@@ -1,7 +1,7 @@
 import { renderErrorMessage, unrenderErrorMessage } from "./errorMessage";
 import { setPreviewImage } from "./preview";
-import { getAllImages } from "./services/image";
-import { ImageFileWithoutBlob } from "./types/ImageFile";
+import { getAllImages } from "../services/image";
+import { ImageFileWithoutBlob } from "../types/ImageFile";
 
 const imageListElement = document
   .querySelector<HTMLUListElement>('.images-list');

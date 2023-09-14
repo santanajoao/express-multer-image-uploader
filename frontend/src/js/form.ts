@@ -1,7 +1,7 @@
 import { renderErrorMessage, unrenderErrorMessage } from "./errorMessage";
 import { appendImageListItem } from "./list";
 import { setPreviewImage } from "./preview";
-import { postNewImage } from "./services/image";
+import { postNewImage } from "../services/image";
 
 const formContainer = document.querySelector<HTMLDivElement>('.form-container');
 const imageForm = document.querySelector<HTMLFormElement>('.form');
