@@ -11,6 +11,8 @@ dados para renderizar essa imagem novamente no HTML.
 
 Uma página que exibe um formulário de cadastro de uma imagem, uma lista de todas as imagens cadastradas e um preview de uma imagem.
 
+<img src="images/screen-shoot.png" alt="Captura de tela do frontend da aplicação">
+
 ### Backend
 
 O backend conta com uma API desenvolvida para o frontend e os seguintes endpoints:
