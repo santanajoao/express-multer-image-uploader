@@ -1,8 +1,8 @@
 export type ImageFile = {
   id: string;
   name: string;
-  blobString: string;
+  bufferString: string;
   mimetype: string;
 }
 
-export type ImageFileWithoutBlob = Omit<ImageFile, 'blobArray'>;
+export type ImageFileWithoutBuffer = Omit<ImageFile, 'bufferString'>;

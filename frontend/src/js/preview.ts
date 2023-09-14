@@ -27,7 +27,7 @@ const renderPreviewImage = (image: ImageFile) => {
 
   previewImage.setAttribute('alt', image.name);
 
-  const imageUrl = `data:${image.mimetype};base64,${image.blobString}`;
+  const imageUrl = `data:${image.mimetype};base64,${image.bufferString}`;
   previewImage.setAttribute('src', imageUrl);
 }
 

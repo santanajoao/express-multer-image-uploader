@@ -2,10 +2,12 @@ import * as imageService from '../services/image.service';
 import { Request, Response } from 'express';
 import HttpError from '../errors/HttpError';
 import httpStatus from '../constants/httpStatus';
+import { getImageListFields } from './utils/dto';
 
 export const getAllImages = async (_req: Request, res: Response) => {
   const imageList = await imageService.getAll();
-  return res.status(httpStatus.OK).json(imageList);
+  const imageListFieldsList = imageList.map(getImageListFields);
+  return res.status(httpStatus.OK).json(imageListFieldsList);
 };
 
 export const getImageById = async (req: Request, res: Response) => {
@@ -20,9 +22,11 @@ export const postImage = async (req: Request, res: Response) => {
 
   const createdImage = await imageService.create({
     name: req.file.originalname,
-    blobString: req.file.buffer.toString('base64'),
+    bufferString: req.file.buffer.toString('base64'),
     mimetype: req.file.mimetype,
   });
 
-  return res.status(httpStatus.CREATED).json(createdImage);
+  const createdImageListFields = getImageListFields(createdImage);
+
+  return res.status(httpStatus.CREATED).json(createdImageListFields);
 };

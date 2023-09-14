@@ -1,10 +1,10 @@
-import { ImageFile, ImageFileWithoutBlob } from '../types/ImageFile';
+import { ImageFile, ImageFileWithoutBuffer } from '../types/ImageFile';
 import { treatedFetch } from '../utils/fetch';
 
 export const endpoint = 'http://localhost:3001/images';
 
 export const getAllImages = async () => {
-  const response = await treatedFetch<ImageFileWithoutBlob[]>(endpoint);
+  const response = await treatedFetch<ImageFileWithoutBuffer[]>(endpoint);
   return response;
 };
 

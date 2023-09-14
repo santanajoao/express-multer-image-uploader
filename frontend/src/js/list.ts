@@ -1,7 +1,7 @@
 import { renderErrorMessage, unrenderErrorMessage } from "./errorMessage";
 import { setPreviewImage } from "./preview";
 import { getAllImages } from "../services/image";
-import { ImageFileWithoutBlob } from "../types/ImageFile";
+import { ImageFileWithoutBuffer } from "../types/ImageFile";
 
 const imageListElement = document
   .querySelector<HTMLUListElement>('.images-list');
@@ -18,7 +18,7 @@ if (!imageListElement || !imageListMessage || !imageListContainer) {
 
 // functions
 
-export const appendImageListItem = (image: ImageFileWithoutBlob) => {
+export const appendImageListItem = (image: ImageFileWithoutBuffer) => {
   unrenderErrorMessage(imageListContainer)
 
   imageListMessage.textContent = 'Suas imagens:';
@@ -39,7 +39,7 @@ export const appendImageListItem = (image: ImageFileWithoutBlob) => {
   imageListElement.appendChild(listItem);
 }
 
-const renderImageList = (imageList: ImageFileWithoutBlob[]) => {
+const renderImageList = (imageList: ImageFileWithoutBuffer[]) => {
   if (imageList.length > 0) {
     imageListMessage.textContent = 'Suas imagens:';
     imageList.forEach(appendImageListItem);

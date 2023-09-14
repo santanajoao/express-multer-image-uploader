@@ -1,5 +1,5 @@
 import { ImageFile, ImageFileCreation } from '../types/ImageFile';
-import * as fileUtils from '../utils/file';
+import * as fileUtils from './utils/file';
 
 const dataFilePath = 'src/data/files.json';
 
